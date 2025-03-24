@@ -1,97 +1,84 @@
-# Personal Portfolio Website
+# Aayush Kher - Portfolio Website
 
-This is a modern, responsive portfolio website built with HTML, CSS, and JavaScript. It features a clean design with smooth animations and a mobile-friendly layout.
+Welcome to my portfolio website! I'm Aayush Kher, a passionate second-year Computer Science Engineering student at Vellore Institute of Technology, specializing in Data Science and Software Development.
 
-## Features
+## 🚀 About Me
 
-- Responsive design that works on all devices
-- Smooth scrolling navigation
-- Animated sections on scroll
-- Contact form
-- Skills showcase
-- Projects showcase
-- Social media links
-- Modern and clean UI
+I'm a full-stack developer with a keen interest in creating innovative solutions using cutting-edge technologies. My journey in tech is driven by a passion for learning and building impactful applications.
 
-## Customization
+## 💻 Skills
 
-### 1. Personal Information
-Edit the following in `index.html`:
-- Your name in the hero section
-- Your tagline/role
-- About me section content
-- Social media links (GitHub, LinkedIn, email)
-- Skills list
-- Projects section
+### Frontend Development
+- React.js
+- Next.js
+- Tailwind CSS
+- HTML5 & CSS3
+- JavaScript (ES6+)
 
-### 2. Styling
-You can customize the colors by modifying the CSS variables in `styles.css`:
-```css
-:root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --text-color: #1f2937;
-    --light-text: #6b7280;
-    --background: #ffffff;
-    --section-bg: #f3f4f6;
-}
-```
+### Backend Development
+- Node.js
+- Python
+- RESTful APIs
+- Database Management
 
-### 3. Projects
-To add your projects, add project cards in the projects section of `index.html`. Example structure:
-```html
-<div class="project-card">
-    <h3>Project Name</h3>
-    <p>Project description</p>
-    <div class="project-links">
-        <a href="project-url" target="_blank">View Project</a>
-        <a href="github-url" target="_blank">GitHub</a>
-    </div>
-</div>
-```
+### Data Science & Machine Learning
+- TensorFlow
+- scikit-learn
+- Data Analysis
+- Machine Learning Models
 
-## Deployment
+### Tools & Technologies
+- AWS
+- Git & GitHub
+- Adobe Creative Suite
+- VS Code
 
-### Option 1: GitHub Pages (Recommended)
-1. Create a new repository on GitHub
-2. Push your code to the repository
-3. Go to repository Settings > Pages
-4. Select the main branch as the source
-5. Your site will be available at `https://yourusername.github.io/repository-name`
+## 🎓 Education
 
-### Option 2: Netlify
-1. Create an account on Netlify
-2. Connect your GitHub repository
-3. Deploy with default settings
-4. Your site will be available at `https://your-site-name.netlify.app`
+- **Bachelor of Technology in Computer Science Engineering**
+  - Vellore Institute of Technology
+  - Second Year
+  - Expected Graduation: 2026
 
-### Option 3: Vercel
-1. Create an account on Vercel
-2. Connect your GitHub repository
-3. Deploy with default settings
-4. Your site will be available at `https://your-site-name.vercel.app`
+## 🛠️ Projects
 
-## Local Development
+### 1. NetScan
+A sophisticated network traffic analyzer that helps in monitoring and analyzing network patterns.
 
-To run the website locally:
-1. Clone this repository
-2. Open `index.html` in your browser
-3. Or use a local server:
+### 2. Parkinson's Disease Detection
+An AI-powered diagnostic tool that uses machine learning to assist in early detection of Parkinson's disease.
+
+## 📫 Contact
+
+Feel free to reach out to me through:
+- Email: [kheraayush190@gmail.com](mailto:kheraayush190@gmail.com)
+- LinkedIn: [aayush-kher-8aa354231](https://www.linkedin.com/in/aayush-kher-8aa354231/)
+- GitHub: [@Aayushhkher](https://github.com/Aayushhkher)
+
+## 🌟 Features of this Portfolio
+
+- Modern and responsive design
+- Interactive UI with smooth animations
+- Project showcase with detailed descriptions
+- Skills visualization
+- Contact form for easy communication
+- AI-powered chatbot (Sky) for interactive experience
+
+## 🚀 Getting Started
+
+1. Clone the repository:
    ```bash
-   # Using Python
-   python -m http.server 8000
-   
-   # Using Node.js
-   npx serve
+   git clone https://github.com/Aayushhkher/Aayush-kher-portfolio.git
    ```
 
-## Browser Support
+2. Open `index.html` in your browser or use a local server.
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+3. Interact with Sky, the AI chatbot, to learn more about me and my work!
 
-## Contributing
+## 📝 License
 
-Feel free to submit issues and enhancement requests! 
+This project is open source and available under the MIT License.
+
+---
+
+Made with ❤️ by Aayush Kher 
