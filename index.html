@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aayush Kher - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">AK</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Aayush Kher</h1>
+            <p class="tagline">Software Developer & Data Science Enthusiast</p>
+            <div class="social-links">
+                <a href="https://github.com/Aayushhkher" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/aayush-kher-8aa354231" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:kheraayush190@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>🚀 Second-year CSE student at Vellore Institute of Technology with a passion for Data Science and Software Development. Proficient in MERN stack development and exploring data-driven solutions through machine learning and AI. Research enthusiast, diving into innovative tech and algorithms. Experienced with database management systems (DBMS) and cloud technologies.</p>
+            </div>
+            <div class="about-image">
+                <img src="1739948136644.jpeg" alt="Aayush Kher" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Next.js</li>
+                    <li>Tailwind CSS</li>
+                    <li>Redux</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Backend & Data Science</h3>
+                <ul>
+                    <li>Node.js</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                    <li>TensorFlow</li>
+                    <li>scikit-learn</li>
+                    <li>Pandas</li>
+                    <li>NumPy</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Others</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>AWS</li>
+                    <li>Vercel</li>
+                    <li>JWT</li>
+                    <li>Figma</li>
+                    <li>Adobe Creative Suite</li>
+                    <li>Canva</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>NetScan</h3>
+                <p>A powerful Python-based tool for real-time network traffic monitoring and analysis. Features include packet capture, protocol distribution analysis, and safety assessment for network traffic.</p>
+                <div class="project-stats">
+                    <canvas id="netScanChart" width="150" height="150"></canvas>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Aayushhkher/NetScan" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Parkinson's Disease Detection</h3>
+                <p>An AI-powered system for early detection of Parkinson's disease using machine learning algorithms. Utilizes advanced data analysis and neural networks to process patient data and provide accurate diagnoses.</p>
+                <div class="project-stats">
+                    <canvas id="parkinsonChart" width="150" height="150"></canvas>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Aayushhkher/Parkinsons-Disease-Detection-Using-ML" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <p>Feel free to reach out to me directly at <a href="mailto:kheraayush190@gmail.com">kheraayush190@gmail.com</a> or use the form below:</p>
+            </div>
+            <form id="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Aayush Kher. All rights reserved.</p>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i>
+                <span>Sky - AI Assistant</span>
+            </div>
+            <button class="chat-toggle" id="chatToggle">
+                <i class="fas fa-comments"></i>
+            </button>
+        </div>
+        <div class="chat-container" id="chatContainer">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-content">
+                        👋 Welcome to Aayush's Portfolio! I'm Sky, your personal AI guide. I'd love to help you learn more about Aayush's:
+                        • Skills & Experience
+                        • Projects & Achievements
+                        • Education & Background
+                        
+                        What interests you the most?
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
