@@ -65,7 +65,7 @@ document.querySelectorAll('section').forEach(section => {
 
 // Project Language Distribution Charts
 document.addEventListener('DOMContentLoaded', function() {
-    // NetScan Project Chart
+    // NetScan Chart
     const netScanCtx = document.getElementById('netScanChart').getContext('2d');
     new Chart(netScanCtx, {
         type: 'pie',
@@ -74,69 +74,67 @@ document.addEventListener('DOMContentLoaded', function() {
             datasets: [{
                 data: [71.1, 19.1, 8.8],
                 backgroundColor: [
-                    '#3776AB', // Python blue
-                    '#4EAA25', // Shell green
-                    '#5391FE', // PowerShell blue
+                    'rgba(59, 130, 246, 0.8)',  // Blue
+                    'rgba(34, 197, 94, 0.8)',   // Green
+                    'rgba(59, 130, 246, 0.6)'   // Light Blue
                 ],
-                borderWidth: 2,
-                borderColor: '#ffffff'
+                borderColor: [
+                    'rgba(59, 130, 246, 1)',
+                    'rgba(34, 197, 94, 1)',
+                    'rgba(59, 130, 246, 1)'
+                ],
+                borderWidth: 1
             }]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 legend: {
                     position: 'bottom',
                     labels: {
+                        padding: 20,
                         font: {
                             size: 12
                         }
-                    }
-                },
-                title: {
-                    display: true,
-                    text: 'Language Distribution',
-                    font: {
-                        size: 14
                     }
                 }
             }
         }
     });
 
-    // Parkinson's Disease Detection Project Chart
-    const parkinsonCtx = document.getElementById('parkinsonChart').getContext('2d');
-    new Chart(parkinsonCtx, {
+    // Parkinson's Disease Detection Chart
+    const parkinsonsCtx = document.getElementById('parkinsonsChart').getContext('2d');
+    new Chart(parkinsonsCtx, {
         type: 'pie',
         data: {
-            labels: ['Python', 'Jupyter Notebook', 'TensorFlow'],
+            labels: ['Python', 'TypeScript', 'HTML'],
             datasets: [{
-                data: [65, 20, 15],
+                data: [54.4, 28.5, 9.2],
                 backgroundColor: [
-                    '#3776AB', // Python blue
-                    '#F37626', // Jupyter orange
-                    '#FF6F00', // TensorFlow orange
+                    'rgba(59, 130, 246, 0.8)',  // Blue
+                    'rgba(34, 197, 94, 0.8)',   // Green
+                    'rgba(59, 130, 246, 0.6)'   // Light Blue
                 ],
-                borderWidth: 2,
-                borderColor: '#ffffff'
+                borderColor: [
+                    'rgba(59, 130, 246, 1)',
+                    'rgba(34, 197, 94, 1)',
+                    'rgba(59, 130, 246, 1)'
+                ],
+                borderWidth: 1
             }]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 legend: {
                     position: 'bottom',
                     labels: {
+                        padding: 20,
                         font: {
                             size: 12
                         }
-                    }
-                },
-                title: {
-                    display: true,
-                    text: 'Language Distribution',
-                    font: {
-                        size: 14
                     }
                 }
             }
