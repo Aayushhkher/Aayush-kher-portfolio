@@ -36,9 +36,9 @@ I'm a full-stack developer with a keen interest in creating innovative solutions
 ## 🎓 Education
 
 - **Bachelor of Technology in Computer Science Engineering**
-  - Vellore Institute of Technology
+  - Manipal University, Jaipur
   - Second Year
-  - Expected Graduation: 2026
+  - Expected Graduation: 2027
 
 ## 🛠️ Projects
 
