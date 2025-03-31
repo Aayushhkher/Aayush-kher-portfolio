@@ -140,6 +140,44 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Face and Age Recognition System Chart
+    const ageRecognitionCtx = document.getElementById('ageRecognitionChart').getContext('2d');
+    new Chart(ageRecognitionCtx, {
+        type: 'pie',
+        data: {
+            labels: ['Python', 'TensorFlow', 'OpenCV'],
+            datasets: [{
+                data: [65, 25, 10],
+                backgroundColor: [
+                    'rgba(59, 130, 246, 0.8)',  // Blue
+                    'rgba(34, 197, 94, 0.8)',   // Green
+                    'rgba(59, 130, 246, 0.6)'   // Light Blue
+                ],
+                borderColor: [
+                    'rgba(59, 130, 246, 1)',
+                    'rgba(34, 197, 94, 1)',
+                    'rgba(59, 130, 246, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 20,
+                        font: {
+                            size: 12
+                        }
+                    }
+                }
+            }
+        }
+    });
 });
 
 // Chatbot functionality
@@ -149,20 +187,9 @@ const chatMessages = document.getElementById('chatMessages');
 const userInput = document.getElementById('userInput');
 const sendMessage = document.getElementById('sendMessage');
 
-// Welcome behavior
-setTimeout(() => {
-    if (window.innerWidth > 768) {  // Don't auto-open on mobile
-        chatWidget.classList.remove('collapsed');
-        // Add subtle attention animation to chat toggle
-        chatToggle.style.animation = 'pulse 2s infinite';
-    }
-}, 2000);  // Wait 2 seconds before showing
-
 // Toggle chat widget
 chatToggle.addEventListener('click', () => {
     chatWidget.classList.toggle('collapsed');
-    // Remove attention animation once clicked
-    chatToggle.style.animation = 'none';
 });
 
 // Send message on button click or enter key
