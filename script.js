@@ -178,6 +178,46 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // Plumber Booking System Chart
+    const plumberBookingCtx = document.getElementById('plumberBookingChart').getContext('2d');
+    new Chart(plumberBookingCtx, {
+        type: 'pie',
+        data: {
+            labels: ['JavaScript', 'HTML/CSS', 'Node.js', 'Database'],
+            datasets: [{
+                data: [45, 25, 20, 10],
+                backgroundColor: [
+                    'rgba(59, 130, 246, 0.8)',  // Blue
+                    'rgba(34, 197, 94, 0.8)',   // Green
+                    'rgba(59, 130, 246, 0.6)',  // Light Blue
+                    'rgba(34, 197, 94, 0.6)'    // Light Green
+                ],
+                borderColor: [
+                    'rgba(59, 130, 246, 1)',
+                    'rgba(34, 197, 94, 1)',
+                    'rgba(59, 130, 246, 1)',
+                    'rgba(34, 197, 94, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 20,
+                        font: {
+                            size: 12
+                        }
+                    }
+                }
+            }
+        }
+    });
 });
 
 // Chatbot functionality
@@ -238,11 +278,13 @@ function getBotResponse(message) {
         'who': "🎓 Aayush is a talented second-year CSE student at Vellore Institute of Technology. He's passionate about Data Science and Software Development, always pushing the boundaries of what's possible with code!",
         'education': "📚 Aayush is pursuing Computer Science Engineering at Vellore Institute of Technology, where he's developing his expertise in cutting-edge technologies.",
         'skills': "💻 Aayush is a full-stack developer with expertise in:\n• Frontend: React, Next.js, Tailwind\n• Backend: Node.js, Python\n• Data Science: TensorFlow, scikit-learn\n• Tools: AWS, Git, Adobe Creative Suite",
-        'projects': "🚀 Let me tell you about Aayush's exciting projects:\n\n1. NetScan: A sophisticated network traffic analyzer\n2. Parkinson's Disease Detection: An AI-powered diagnostic tool\n\nWhich one would you like to know more about?",
+        'projects': "🚀 Let me tell you about Aayush's exciting projects:\n\n1. NetScan: A sophisticated network traffic analyzer\n2. Parkinson's Disease Detection: An AI-powered diagnostic tool\n3. Plumber Booking System: A comprehensive web application for booking plumbing services\n4. Face and Age Recognition System: Deep learning model for age prediction\n\nWhich one would you like to know more about?",
         'contact': "📫 You can reach Aayush at kheraayush190@gmail.com\n\nAlso connect with him on:\n• GitHub: @Aayushhkher\n• LinkedIn: aayush-kher-8aa354231",
         'experience': "💡 Aayush specializes in MERN stack development and machine learning. He's passionate about creating data-driven solutions and has hands-on experience with real-world projects.",
         'interests': "🔍 Aayush is fascinated by:\n• Data Science & AI\n• Machine Learning\n• Full-stack Development\n• Innovative Tech Solutions",
         'background': "🌟 Aayush is a Computer Science student with a strong foundation in both frontend and backend development. He combines technical expertise with creative problem-solving skills.",
+        'plumber': "🔧 The Plumber Booking System is a comprehensive web application that allows users to book plumbing services online. Key features include:\n• User authentication and registration\n• Service scheduling and booking management\n• Real-time availability tracking\n• Admin dashboard for service providers\n• Payment integration\n• Customer reviews and ratings\n\nBuilt with modern web technologies for a seamless user experience!",
+        'booking': "📅 The Plumber Booking System showcases Aayush's full-stack development skills, combining frontend and backend technologies to create a practical, user-friendly application for service booking.",
         'default': "I'd be happy to tell you about Aayush! You can ask me about his:\n• Skills & Projects\n• Education & Experience\n• Background & Interests\n\nWhat would you like to know?"
     };
 
