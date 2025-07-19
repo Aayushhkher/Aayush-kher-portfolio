@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,16 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <nav class="navbar">
         <div class="nav-content">
             <div class="logo">AK</div>
@@ -16,6 +26,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -23,6 +34,9 @@
     </nav>
 
     <section id="home" class="hero">
+        <!-- Particle Background -->
+        <div class="particles" id="particles"></div>
+        
         <div class="hero-content">
             <h1>Aayush Kher</h1>
             <p class="tagline">Software Developer & Data Science Enthusiast</p>
@@ -51,41 +65,164 @@
         <div class="skills-grid">
             <div class="skill-category">
                 <h3>Frontend</h3>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Next.js</li>
-                    <li>Tailwind CSS</li>
-                    <li>Redux</li>
-                </ul>
+                <div class="skill-progress">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">React</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Next.js</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Tailwind CSS</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="85"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="skill-category">
                 <h3>Backend & Data Science</h3>
-                <ul>
-                    <li>Node.js</li>
-                    <li>Python</li>
-                    <li>Java</li>
-                    <li>MySQL</li>
-                    <li>MongoDB</li>
-                    <li>TensorFlow</li>
-                    <li>scikit-learn</li>
-                    <li>Pandas</li>
-                    <li>NumPy</li>
-                </ul>
+                <div class="skill-progress">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Node.js</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">TensorFlow</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">MongoDB</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="85"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="skill-category">
                 <h3>Tools & Others</h3>
-                <ul>
-                    <li>Git</li>
-                    <li>AWS</li>
-                    <li>Vercel</li>
-                    <li>JWT</li>
-                    <li>Figma</li>
-                    <li>Adobe Creative Suite</li>
-                    <li>Canva</li>
-                </ul>
+                <div class="skill-progress">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Git</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">AWS</span>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Figma</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Docker</span>
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-percentage="65"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="timeline">
+        <h2>Journey & Experience</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2024 - Present</h3>
+                    <h4>Research & Innovation</h4>
+                    <p>Leading research initiatives in machine learning and AI, focusing on healthcare applications and network security solutions.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2023 - 2024</h3>
+                    <h4>Full-Stack Development</h4>
+                    <p>Developed multiple web applications using MERN stack, including the Plumber Booking System and various AI-powered tools.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2022 - 2023</h3>
+                    <h4>Data Science & ML</h4>
+                    <p>Built sophisticated machine learning models for disease detection and computer vision applications using Python and TensorFlow.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2022 - Present</h3>
+                    <h4>Computer Science Engineering</h4>
+                    <p>Pursuing B.Tech in Computer Science at Manipal University, Jaipur with focus on software development and data science.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -174,6 +311,11 @@
     <footer>
         <p>&copy; 2024 Aayush Kher. All rights reserved.</p>
     </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fab" id="fab">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <!-- Chatbot Widget -->
     <div class="chat-widget" id="chatWidget">

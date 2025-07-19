@@ -1,3 +1,70 @@
+// Loading Screen
+window.addEventListener('load', () => {
+    const loadingScreen = document.getElementById('loadingScreen');
+    setTimeout(() => {
+        loadingScreen.classList.add('hidden');
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }, 1500);
+});
+
+// Theme Toggle
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+const themeIcon = themeToggle.querySelector('i');
+
+// Check for saved theme preference or default to light
+const currentTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', currentTheme);
+updateThemeIcon(currentTheme);
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+});
+
+function updateThemeIcon(theme) {
+    if (theme === 'dark') {
+        themeIcon.className = 'fas fa-sun';
+    } else {
+        themeIcon.className = 'fas fa-moon';
+    }
+}
+
+// Particle Background
+function createParticles() {
+    const particlesContainer = document.getElementById('particles');
+    const particleCount = 50;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Random size between 2px and 6px
+        const size = Math.random() * 4 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        
+        // Random position
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${Math.random() * 100}%`;
+        
+        // Random animation delay
+        particle.style.animationDelay = `${Math.random() * 6}s`;
+        particle.style.animationDuration = `${Math.random() * 3 + 3}s`;
+        
+        particlesContainer.appendChild(particle);
+    }
+}
+
+// Initialize particles when page loads
+document.addEventListener('DOMContentLoaded', createParticles);
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -24,6 +91,21 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Dark mode navbar adjustment
+function updateNavbarTheme() {
+    const theme = html.getAttribute('data-theme');
+    if (theme === 'dark') {
+        navbar.style.background = 'rgba(17, 24, 39, 0.98)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
+    } else {
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    }
+}
+
+// Update navbar theme when theme changes
+themeToggle.addEventListener('click', updateNavbarTheme);
+
 // Form submission handling
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
@@ -39,6 +121,24 @@ if (contactForm) {
         alert('Thank you for your message! I will get back to you soon.');
         this.reset();
     });
+}
+
+// Skill Progress Animation
+function animateSkillBars() {
+    const progressBars = document.querySelectorAll('.progress-fill');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progressBar = entry.target;
+                const percentage = progressBar.getAttribute('data-percentage');
+                progressBar.style.width = `${percentage}%`;
+                progressBar.classList.add('animate');
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    progressBars.forEach(bar => observer.observe(bar));
 }
 
 // Add animation on scroll
@@ -61,6 +161,11 @@ document.querySelectorAll('section').forEach(section => {
     section.style.transform = 'translateY(20px)';
     section.style.transition = 'all 0.6s ease-out';
     observer.observe(section);
+});
+
+// Initialize skill animations
+document.addEventListener('DOMContentLoaded', () => {
+    animateSkillBars();
 });
 
 // Project Language Distribution Charts
@@ -220,6 +325,48 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Enhanced Project Card Interactions
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-15px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+    
+    // Add click effect
+    card.addEventListener('click', function() {
+        this.style.transform = 'translateY(-15px) scale(1.02)';
+        setTimeout(() => {
+            this.style.transform = 'translateY(0) scale(1)';
+        }, 150);
+    });
+});
+
+// Typing Effect for Hero Section
+function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.innerHTML = '';
+    
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    
+    type();
+}
+
+// Initialize typing effect when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const tagline = document.querySelector('.tagline');
+    const originalText = tagline.textContent;
+    typeWriter(tagline, originalText, 50);
+});
+
 // Chatbot functionality
 const chatWidget = document.getElementById('chatWidget');
 const chatToggle = document.getElementById('chatToggle');
@@ -248,11 +395,11 @@ function handleUserMessage() {
     addMessage(message, 'user');
     userInput.value = '';
 
-    // Get bot response
-    const response = getBotResponse(message.toLowerCase());
+    // Simulate bot response
     setTimeout(() => {
-        addMessage(response, 'bot');
-    }, 500);
+        const botResponse = getBotResponse(message);
+        addMessage(botResponse, 'bot');
+    }, 1000);
 }
 
 function addMessage(text, sender) {
@@ -271,34 +418,88 @@ function addMessage(text, sender) {
 }
 
 function getBotResponse(message) {
-    // Bot knowledge base about Aayush
-    const responses = {
-        'hello': "Hi there! 😊 I'm happy to help you learn more about Aayush. What would you like to know?",
-        'hi': "Hello! 👋 Great to meet you! I'm here to tell you all about Aayush's journey and achievements.",
-        'who': "🎓 Aayush is a talented second-year CSE student at Vellore Institute of Technology. He's passionate about Data Science and Software Development, always pushing the boundaries of what's possible with code!",
-        'education': "📚 Aayush is pursuing Computer Science Engineering at Vellore Institute of Technology, where he's developing his expertise in cutting-edge technologies.",
-        'skills': "💻 Aayush is a full-stack developer with expertise in:\n• Frontend: React, Next.js, Tailwind\n• Backend: Node.js, Python\n• Data Science: TensorFlow, scikit-learn\n• Tools: AWS, Git, Adobe Creative Suite",
-        'projects': "🚀 Let me tell you about Aayush's exciting projects:\n\n1. NetScan: A sophisticated network traffic analyzer\n2. Parkinson's Disease Detection: An AI-powered diagnostic tool\n3. Plumber Booking System: A comprehensive web application for booking plumbing services\n4. Face and Age Recognition System: Deep learning model for age prediction\n\nWhich one would you like to know more about?",
-        'contact': "📫 You can reach Aayush at kheraayush190@gmail.com\n\nAlso connect with him on:\n• GitHub: @Aayushhkher\n• LinkedIn: aayush-kher-8aa354231",
-        'experience': "💡 Aayush specializes in MERN stack development and machine learning. He's passionate about creating data-driven solutions and has hands-on experience with real-world projects.",
-        'interests': "🔍 Aayush is fascinated by:\n• Data Science & AI\n• Machine Learning\n• Full-stack Development\n• Innovative Tech Solutions",
-        'background': "🌟 Aayush is a Computer Science student with a strong foundation in both frontend and backend development. He combines technical expertise with creative problem-solving skills.",
-        'plumber': "🔧 The Plumber Booking System is a comprehensive web application that allows users to book plumbing services online. Key features include:\n• User authentication and registration\n• Service scheduling and booking management\n• Real-time availability tracking\n• Admin dashboard for service providers\n• Payment integration\n• Customer reviews and ratings\n\nBuilt with modern web technologies for a seamless user experience!",
-        'booking': "📅 The Plumber Booking System showcases Aayush's full-stack development skills, combining frontend and backend technologies to create a practical, user-friendly application for service booking.",
-        'default': "I'd be happy to tell you about Aayush! You can ask me about his:\n• Skills & Projects\n• Education & Experience\n• Background & Interests\n\nWhat would you like to know?"
-    };
-
-    // Check for keywords in the message
-    for (const [key, response] of Object.entries(responses)) {
-        if (message.includes(key)) {
-            return response;
-        }
+    const lowerMessage = message.toLowerCase();
+    
+    if (lowerMessage.includes('skill') || lowerMessage.includes('experience')) {
+        return "Aayush is proficient in MERN stack, Python for ML/AI, and has experience with cloud technologies like AWS. He's particularly strong in React, Node.js, and data science tools like TensorFlow and scikit-learn.";
+    } else if (lowerMessage.includes('project') || lowerMessage.includes('work')) {
+        return "Aayush has built several impressive projects including NetScan (network monitoring), Parkinson's Disease Detection using ML, Face and Age Recognition System, and a Plumber Booking System. All projects showcase his full-stack development and AI/ML skills.";
+    } else if (lowerMessage.includes('education') || lowerMessage.includes('background')) {
+        return "Aayush is a second-year CSE student at Manipal University, Jaipur. He's passionate about data science and software development, with a focus on research and innovative tech solutions.";
+    } else if (lowerMessage.includes('contact') || lowerMessage.includes('reach')) {
+        return "You can reach Aayush at kheraayush190@gmail.com or connect with him on LinkedIn and GitHub. He's always open to discussing new opportunities and collaborations!";
+    } else {
+        return "I'd be happy to help you learn more about Aayush! You can ask me about his skills, projects, education, or how to contact him. What would you like to know?";
     }
-
-    return responses.default;
 }
 
-// Initialize chat widget as collapsed on mobile
-if (window.innerWidth <= 768) {
-    chatWidget.classList.add('collapsed');
-} 
+// Smooth reveal animations for elements
+const revealElements = document.querySelectorAll('.skill-category, .project-card, .timeline-item');
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, { threshold: 0.1 });
+
+revealElements.forEach(element => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(30px)';
+    element.style.transition = 'all 0.6s ease-out';
+    revealObserver.observe(element);
+});
+
+// Parallax effect for hero section
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    const particles = document.getElementById('particles');
+    
+    if (hero && particles) {
+        const rate = scrolled * -0.5;
+        particles.style.transform = `translateY(${rate}px)`;
+    }
+});
+
+// Floating Action Button
+const fab = document.getElementById('fab');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        fab.classList.add('visible');
+    } else {
+        fab.classList.remove('visible');
+    }
+});
+
+fab.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Add some interactive elements
+document.addEventListener('DOMContentLoaded', () => {
+    // Add pulse animation to social links
+    const socialLinks = document.querySelectorAll('.social-links a');
+    socialLinks.forEach((link, index) => {
+        link.style.animationDelay = `${index * 0.1}s`;
+        link.classList.add('pulse');
+    });
+    
+    // Add hover effects to skill categories
+    const skillCategories = document.querySelectorAll('.skill-category');
+    skillCategories.forEach(category => {
+        category.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        category.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+}); 
