@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# Aayush Kher - Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my portfolio website! I'm Aayush Kher, a passionate third-year Computer Science Engineering student at Manipal University Jaipur, specializing in Data Science and Software Development.
 
-## Available Scripts
+## 🚀 About Me
 
-In the project directory, you can run:
+I'm a full-stack developer and startup founder with a keen interest in creating innovative solutions using cutting-edge technologies. My journey in tech is driven by a passion for learning and building impactful applications.
 
-### `npm start`
+## 🏢 Startup Founder - FORTEVA.TECH
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I'm the founder of **FORTEVA.TECH**, an AI/Tech startup focused on democratizing technology by providing premium AI solutions at affordable prices. Our mission is to bridge the gap between enterprise-grade technology and everyday users.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### What FORTEVA.TECH Offers:
+- **AI Bots & Automation** - Intelligent chatbots and workflow automation
+- **Custom Dashboards** - Beautiful, interactive data visualizations
+- **Full-stack Websites** - Modern, responsive web applications
+- **ML Models on Demand** - Custom machine learning solutions
 
-### `npm test`
+## 💻 Skills
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend Development
+- React.js
+- Next.js
+- Tailwind CSS
+- HTML5 & CSS3
+- JavaScript (ES6+)
+- TypeScript
 
-### `npm run build`
+### Backend Development
+- Node.js
+- Python
+- Express.js
+- RESTful APIs
+- Database Management
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Data Science & Machine Learning
+- TensorFlow
+- OpenCV
+- scikit-learn
+- Pandas & NumPy
+- Computer Vision
+- Deep Learning
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Tools & Technologies
+- AWS
+- Git & GitHub
+- Docker
+- VS Code
+- Figma
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎓 Education
 
-### `npm run eject`
+- **Bachelor of Technology in Computer Science Engineering (Data Science)**
+  - Manipal University, Jaipur
+  - Third Year
+  - Expected Graduation: 2027
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Projects
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. NetScan
+A sophisticated network traffic analyzer that helps in monitoring and analyzing network patterns in real-time.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. Parkinson's Disease Detection
+An AI-powered diagnostic tool that uses machine learning to assist in early detection of Parkinson's disease.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 3. Face and Age Recognition System
+A computer vision application using OpenCV for facial recognition and age prediction.
 
-## Learn More
+### 4. ServiceHub Pro
+A comprehensive web application for booking services with multi-dashboard functionality.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📫 Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to reach out to me through:
 
-### Code Splitting
+- **Email**: kheraayush190@gmail.com
+- **LinkedIn**: [aayush-kher-8aa354231](https://linkedin.com/in/aayush-kher-8aa354231)
+- **GitHub**: [@Aayushhkher](https://github.com/Aayushhkher)
+- **Startup Website**: [forteva.in](https://forteva.in)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🌟 Features of this Portfolio
 
-### Analyzing the Bundle Size
+- Modern and responsive React design
+- Interactive UI with smooth animations using Framer Motion
+- Dark/Light theme toggle
+- Project showcase with detailed descriptions
+- Skills visualization with progress bars
+- Startup section showcasing FORTEVA.TECH
+- Contact form for easy communication
+- Fully responsive design for all devices
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Getting Started
 
-### Making a Progressive Web App
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Aayushhkher/Aayush-kher-portfolio.git
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Advanced Configuration
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Deployment
+## 🛠️ Built With
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **React.js** - Frontend framework
+- **Framer Motion** - Animation library
+- **React Icons** - Icon library
+- **CSS3** - Styling with CSS variables for theming
+- **GitHub Pages** - Deployment
 
-### `npm run build` fails to minify
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source and available under the MIT License.
+
+---
+
+Made with ❤️ by Aayush Kher
