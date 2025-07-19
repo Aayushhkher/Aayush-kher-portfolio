@@ -1,84 +1,70 @@
-# Aayush Kher - Portfolio Website
+# Getting Started with Create React App
 
-Welcome to my portfolio website! I'm Aayush Kher, a passionate second-year Computer Science Engineering student at Vellore Institute of Technology, specializing in Data Science and Software Development.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 🚀 About Me
+## Available Scripts
 
-I'm a full-stack developer with a keen interest in creating innovative solutions using cutting-edge technologies. My journey in tech is driven by a passion for learning and building impactful applications.
+In the project directory, you can run:
 
-## 💻 Skills
+### `npm start`
 
-### Frontend Development
-- React.js
-- Next.js
-- Tailwind CSS
-- HTML5 & CSS3
-- JavaScript (ES6+)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Backend Development
-- Node.js
-- Python
-- RESTful APIs
-- Database Management
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### Data Science & Machine Learning
-- TensorFlow
-- scikit-learn
-- Data Analysis
-- Machine Learning Models
+### `npm test`
 
-### Tools & Technologies
-- AWS
-- Git & GitHub
-- Adobe Creative Suite
-- VS Code
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## 🎓 Education
+### `npm run build`
 
-- **Bachelor of Technology in Computer Science Engineering**
-  - Manipal University, Jaipur
-  - Second Year
-  - Expected Graduation: 2027
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## 🛠️ Projects
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### 1. NetScan
-A sophisticated network traffic analyzer that helps in monitoring and analyzing network patterns.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### 2. Parkinson's Disease Detection
-An AI-powered diagnostic tool that uses machine learning to assist in early detection of Parkinson's disease.
+### `npm run eject`
 
-## 📫 Contact
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Feel free to reach out to me through:
-- Email: [kheraayush190@gmail.com](mailto:kheraayush190@gmail.com)
-- LinkedIn: [aayush-kher-8aa354231](https://www.linkedin.com/in/aayush-kher-8aa354231/)
-- GitHub: [@Aayushhkher](https://github.com/Aayushhkher)
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## 🌟 Features of this Portfolio
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-- Modern and responsive design
-- Interactive UI with smooth animations
-- Project showcase with detailed descriptions
-- Skills visualization
-- Contact form for easy communication
-- AI-powered chatbot (Sky) for interactive experience
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## 🚀 Getting Started
+## Learn More
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Aayushhkher/Aayush-kher-portfolio.git
-   ```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-2. Open `index.html` in your browser or use a local server.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-3. Interact with Sky, the AI chatbot, to learn more about me and my work!
+### Code Splitting
 
-## 📝 License
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-This project is open source and available under the MIT License.
+### Analyzing the Bundle Size
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Made with ❤️ by Aayush Kher 
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

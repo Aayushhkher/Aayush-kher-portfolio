@@ -55,7 +55,7 @@ const About = () => {
           >
             <h3>Passionate Developer & Innovator</h3>
             <p>
-              I'm a second-year Computer Science Engineering student at Manipal University, Jaipur, 
+              I'm a third-year Computer Science Engineering student at Manipal University, Jaipur, 
               with a deep passion for creating innovative solutions that make a difference. My journey 
               in technology started with curiosity and has evolved into a commitment to excellence in 
               software development and data science.
